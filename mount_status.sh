@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # A script to check whether volumes are mounted with volume_name and filesystem_type as iinput variables
 
-source common_things.sh
+custom_plugin_dir=`dirname $0`
+source $custom_plugin_dir/common_things.sh
 volume_name=$1
 filesystem_type=$2
 grep_output=`mount | grep -e $volume_name | grep -e $filesystem_type`
