@@ -8,14 +8,14 @@
 # Modify the script for accepting arguments dynamically. Count the no. of arguments that are getting passed
 # and then execute them from here. 
 
-debug_flag=1
-debug_file=/tmp/ssh_wrapper_debug.log
+debug_flag=0
+debug_file=/dev/null
 
-[ $debug_flag -eq 0 ] && echo " arg0= $0 arg1= $1, arg2=$2, arg3=$3 arg4= $4 arg5= $5 arg6= $6 arg7= $7 arg8= $8 arg9= $9 " &> $debug_file
-[ $debug_flag -eq 0 ] && echo "total number of params= $#" &> $debug_file
-[ $debug_flag -eq 0 ] && echo "params are $@" &> $debug_file
+[ $debug_flag -eq 0 ] && echo " arg0= $0 arg1= $1, arg2=$2, arg3=$3 arg4= $4 arg5= $5 arg6= $6 arg7= $7 arg8= $8 arg9= $9 " >> $debug_file
+[ $debug_flag -eq 0 ] && echo "total number of params= $#" >> $debug_file
+[ $debug_flag -eq 0 ] && echo "params are $@" >> $debug_file
 
-echo "$@" &> $debug_file
+echo "$@" >> $debug_file
 
 $1 $2 $3 $4 $5 $6 $7 $8 $9
 
