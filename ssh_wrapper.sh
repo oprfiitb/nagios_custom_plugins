@@ -9,6 +9,7 @@
 # and then execute them from here. 
 
 #FOR debugging
+custom_plugin_dir=`dirname $0`
 source $custom_plugin_dir/common_things.sh
 debug_flag=0
 debug_file=/dev/null

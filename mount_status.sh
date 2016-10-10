@@ -2,11 +2,11 @@
 # A script to check whether volumes are mounted with volume_name and filesystem_type as iinput variables
 
 #FOR debugging
+custom_plugin_dir=`dirname $0`
 source $custom_plugin_dir/common_things.sh
 debug_flag=0
 debug_file=/dev/null
 
-custom_plugin_dir=`dirname $0`
 volume_name=$1
 [ $debug_flag -eq 0 ] && debug $volume_name
 filesystem_type=$2 
