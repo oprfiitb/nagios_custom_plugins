@@ -8,15 +8,15 @@
 # Modify the script for accepting arguments dynamically. Count the no. of arguments that are getting passed
 # and then execute them from here. 
 
+#FOR debugging
+source $custom_plugin_dir/common_things.sh
 debug_flag=0
 debug_file=/dev/null
 
-[ $debug_flag -eq 0 ] && echo " arg0= $0 arg1= $1, arg2=$2, arg3=$3 arg4= $4 arg5= $5 arg6= $6 arg7= $7 arg8= $8 arg9= $9 " >> $debug_file
-[ $debug_flag -eq 0 ] && echo "total number of params= $#" >> $debug_file
-[ $debug_flag -eq 0 ] && echo "params are $@" >> $debug_file
-
-echo "$@" >> $debug_file
+[ $debug_flag -eq 0 ] && debug " arg0= $0 arg1= $1, arg2=$2, arg3=$3 arg4= $4 arg5= $5 arg6= $6 arg7= $7 arg8= $8 arg9= $9 "
+[ $debug_flag -eq 0 ] && debug "total number of params= $#"
+[ $debug_flag -eq 0 ] && debug "complete array of params is $@"
 
 $1 $2 $3 $4 $5 $6 $7 $8 $9
 
-$@
+"$@"
