@@ -18,6 +18,5 @@ debug_file=/dev/null
 [ $debug_flag -eq 0 ] && debug "total number of params= $#"
 [ $debug_flag -eq 0 ] && debug "complete array of params is $@"
 
-$1 $2 $3 $4 $5 $6 $7 $8 $9
-
+#Execute the complete command including calling the check_by_ssh plugin and telling it to call the remote command
 "$@"
