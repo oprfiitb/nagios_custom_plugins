@@ -21,6 +21,6 @@ then
 	echo "$volume_name : is mounted"
 	exit $OK
 else
-	echo "Critical Error."
+	echo "$volume_name not mounted"
 	exit $CRITICAL
 fi
